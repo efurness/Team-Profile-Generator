@@ -1,8 +1,9 @@
-
+const Employee = require("../lib/Employee");
+teamMembers = []
 
 const generateManager = manager => {
     console.log(manager);
-    let ManagerHTML = `
+    let managerHTML = `
     
             <h4>${generateTeam(team)}</h4>
             <div class="row">
@@ -44,23 +45,25 @@ const generateIntern = intern => {
                 <li class="list-group-item" id="humid2">SCHOOL:${intern.school}</li>
                 </ul>
             </div>`
-}       
-
+            return html.join('');
+    };     
         for (let i = 0; i < teamMembers.length; i++) {
-            if team[i].getRole() === "Manager") {
-                generateManager(team)[i]);
+            if (team[i].getRole() === "Manager") {
+                generateManager(team)[i]
             }
-            if team[i].getRole() === "Engineer") {
-                generateEngineer(team)[i]);
+            if (team[i].getRole() === "Engineer") {
+                generateEngineer(team)[i]
+
             }
-            if team[i].getRole() === "Intern") {
-                generateIntern(team)[i]);
+            if (team[i].getRole() === "Intern") {
+                generateIntern(team)[i]
             }
         }
+    
         
-        // return html.join('');
+       
 
             module.exports = team => {
-                return`
+                return
 
-            };
+            }

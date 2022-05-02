@@ -89,7 +89,7 @@ const promptManager = () => {
                 type: 'list',
                 name: 'menu',
                 message: 'please select option',
-                choices: ['add an engineer', 'add an intern', 'add an engineer', 'finish building team']
+                choices: ['add an engineer', 'add an intern', 'finish building team']
             }])
             .then(userChoice => {
                 switch(userChoice.menu) {

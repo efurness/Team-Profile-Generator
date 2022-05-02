@@ -1,49 +1,42 @@
-// const Employee = require("../lib/Employee");
-// const Engineer = require('../lib/Engineer.js');
-// const employee = new Employee('lucas', '0005', 'lucas@gmail.com');
-
-// test('to see if get constructor values for Lucas object'), () => {
-//     expect(Engineer.name).toBe('lucas');
-//     expect(Engineer.id).toBe('0005');
-//     expect(Engineer.email).toBe('lucas@gmail.com');
-//     expect(Engineer.github).toBe('lucasG');
 const Employee = require('../lib/Employee.js');
 const Engineer = require('../lib/Engineer.js');
+
 describe('Engineer', () => {
-    it ('to see if get constructor values for Engineer object', () => {
-        const Engineer = new Engineer('adam', '0008', 'adam@gmail.com');
-        expect(Engineer.name).toEqual('adam');
-        expect(Engineer.id).toEqual('0008');
-        expect(Engineer.email).toEqual('adam@gmail.com');
-        
+    it ('to see if get constructor values for engineer object', () => {
+        const engineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'alucas');
+        expect(engineer.name).toEqual('lucas');
+        expect(engineer.id).toEqual('0005');
+        expect(engineer.email).toEqual('lucas@gmail.com');
+        expect(engineer.github).toEqual('alucas');
     });
 
 
    
     it ('to see if get name values from getName() method', () => {
-        const Engineer = new Employee('adam')
-        expect(newEngineer.getName()).toEqual('adam');
+        const newEngineer = new Employee('lucas')
+        expect(newEngineer.getName()).toEqual('lucas');
     
     });
-// }
-// test('to see if get name values from getName() method'), () => {
-//     expect(Engineer.getName()).toBe('lucas');
-    
-// }
-// test('to see if get id value from getId() method'), () => {
-//     expect(Engineer.getId()).toBe('0005');
-    
-// }
-// test('to see if get email values from getEmail() method'), () => {
-//     expect(Engineer.getEmail()).toBe('lucas@gmail.com');
-    
 
-// test('to see if get role values from getGithub() method'), () => {
-//         expect(Engineer.github()).toBe('lucasG');
-        
-//     }
-// }
-// test('to see if get role values from getRole() method'), () => {
-//     expect(Engineer.getRole).toBe('Engineer');
+
+it ('to see if get id values from getId() method', () => {
+    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
+
+    expect(newEngineer.getId()).toEqual('0005');
+});
+
+
+it ('to see if get email values from getEmail() method', () => {
+    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
+
+    expect(newEngineer.getEmail()).toEqual('lucas@gmail.com');
+
+});
+
+it ('to see if get github values from getGithub() method', () => {
+        const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
     
-// }
+        expect(newEngineer.getgithub()).toEqual('alucas');
+    });
+});
+
