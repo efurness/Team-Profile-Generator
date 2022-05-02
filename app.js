@@ -6,7 +6,7 @@ const generateSite = require('./src/generate-site.js');
 const fs = require('fs');
 const path = require('path');
 const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+const outputPath = path.join(OUTPUT_DIR, "./output/team.html");
 const teamMembers = [];
 
 const promptManager = () => {
@@ -79,7 +79,7 @@ const promptManager = () => {
     })
 }
     const buildTeam = () => {
-        writeToFile("index.html", generateSite(teamMembers));
+        writeToFile("./output/team.html", generateSite(teamMembers));
 
     }
  
@@ -260,7 +260,7 @@ function init () {
     inquirer.prompt(questions)
     .then((inquirerResponse) => {   
         console.log("Making Team Profile Generator");
-        writeToFile("index.html", generateSite(inquirerResponse));
+        writeToFile("./output/team.html", generateSite(inquirerResponse));
     })
     .catch((err) => {
         console.log(err);
