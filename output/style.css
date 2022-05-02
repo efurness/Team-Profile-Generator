@@ -1,0 +1,19 @@
+col-12 col-md-8 col-xl-9 {
+    align-items: flex-end;
+    font-size: medium;
+
+}
+
+
+.card {
+
+    flex: 1 0 200px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: chartreuse;
+    border-width: 2px;
+
+}

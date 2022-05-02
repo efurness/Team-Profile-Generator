@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>TEAM PROFILE GENERATOR</title>
+    
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="./output/style.css"/>
+    
+    </head>
+    
+    <body>
+      <header>TEAM PROFILE</header>
+      <main class="container-fluid">
+        
+        <section class="main">
+          <div class="container">
+            <!-- cards from bootstrap, holding lists of data for 5 day forcast -->
+            <h4>${generateTeam(team)}</h4>
+            <div class="row">
+              <div class="card" style="width: 18rem;">
+                <div class="card-header" id="date2">
+                  Day 2
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="temp2">Temp</li>
+                  <li class="list-group-item" id="wind2">Wind</li>
+                  <li class="list-group-item" id="humid2">Humidity</li>
+                </ul>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-header" id="date3">
+                  Day 3
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="temp3">Temp</li>
+                  <li class="list-group-item" id="wind3">Wind</li>
+                  <li class="list-group-item" id="humid3">Humidity</li>
+                </ul>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-header" id="date4">
+                  Day 4
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="temp4">Temp</li>
+                  <li class="list-group-item" id="wind4">Wind</li>
+                  <li class="list-group-item" id="humid4">Humidity</li>
+                </ul>
+              </div>
+    
+              <div class="card" style="width: 18rem;">
+                <div class="card-header" id="date5">
+                  Day 5
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="temp5">Temp</li>
+                  <li class="list-group-item" id="wind5">Wind</li>
+                  <li class="list-group-item" id="humid5">Humidity</li>
+                </ul>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-header" id="date6">
+                  Day 6
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="temp6">Temp</li>
+                  <li class="list-group-item" id="wind6">Wind</li>
+                  <li class="list-group-item" id="humid6">Humidity</li>
+                </ul>
+              </div>
+            </div>
+    
+          </div>
+        </section>
+        </div>
+    
+      </main>
+    
+    
+      </container>
+    </body>
+    </html>
