@@ -1,5 +1,4 @@
-
-const Manager = require('../lib/Manager');
+const Manager  = require('../lib/Manager');
 const Employee = require('../lib/Employee');
 
 describe('Manager', () => {
@@ -34,7 +33,7 @@ it ('to see if get email values from getEmail() method', () => {
 
 });
 
-it ('to see if get officeNumber values from getofficeNumber() method', () => {
+it ('to see if get office Number values from getofficeNumber() method', () => {
         const newmanager = new Employee('marvin', '0008', 'marvin@gmail.com', '10')
     
         expect(newmanager.getOfficeNumber()).toEqual('10');

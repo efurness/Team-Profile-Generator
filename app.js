@@ -15,16 +15,7 @@ const promptManager = () => {
             { type: 'input',
             name: 'name',
             message: 'What is your name? (Required)',
-            // validate: nameInput => {
-            //     if (nameInput) {
-            //         return true;
-
-            //     } else {
-            //         console.log('please enter your name');
-            //         return false;
-            //     }
-
-            // },
+            
         },
 
 
@@ -73,13 +64,14 @@ const promptManager = () => {
     ])
     .then((answers) => {
         console.log(answers)
-        const manager = new Manager(answers.name, answers.employeeId, answers.employeeEmail, answers.officeNumber);
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         teamMembers.push(manager);
         promptMenu(); 
     })
 }
     const buildTeam = () => {
-        writeToFile("./output/team.html", generateSite(teamMembers));
+        console.log(teamMembers)
+        fs.writeFileSync(path.join(path.resolve(__dirname,"dist"),"team.html"), generateSite(teamMembers),'utf-8');
 
     }
  
@@ -242,30 +234,30 @@ const promptManager = () => {
         promptMenu();
     })
 };  
-const prompt = () => {
-    console.log(`FINISH BUILDING TEAM`);
+// const prompt = () => {
+//     console.log(`FINISH BUILDING TEAM`);
 
-// create directory if no output
-        if (!fs.existsSync(OUTPUT_DIR)) {
-            fs.mkdirSync(OUTPUT_DIR);
-}
-        fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
+// // create directory if no output
+//         if (!fs.existsSync(OUTPUT_DIR)) {
+//             fs.mkdirSync(OUTPUT_DIR);
+// }
+//         // fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
 
-}
+// }
 
 promptManager();
             
         
-function init () {
-    inquirer.prompt(questions)
-    .then((inquirerResponse) => {   
-        console.log("Making Team Profile Generator");
-        writeToFile("./output/team.html", generateSite(inquirerResponse));
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-}
+// function init () {
+//     inquirer.prompt(questions)
+//     .then((inquirerResponse) => {   
+//         console.log("Making Team Profile Generator");
+//         writeToFile("output/team.html", generateSite(inquirerResponse));
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
+// }
 
 
 // init();

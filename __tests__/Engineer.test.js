@@ -1,5 +1,5 @@
 const Employee = require('../lib/Employee.js');
-const Engineer = require('../lib/Engineer.js');
+const Engineer = require('../lib/Engineer');
 
 describe('Engineer', () => {
     it ('to see if get constructor values for engineer object', () => {
@@ -19,24 +19,24 @@ describe('Engineer', () => {
     });
 
 
-it ('to see if get id values from getId() method', () => {
-    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
+    it ('to see if get id values from getId() method', () => {
+    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'alucas')
 
     expect(newEngineer.getId()).toEqual('0005');
-});
+    });
 
 
-it ('to see if get email values from getEmail() method', () => {
-    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
+    it ('to see if get email values from getEmail() method', () => {
+    const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'alucas')
 
     expect(newEngineer.getEmail()).toEqual('lucas@gmail.com');
 
-});
+    });
 
-it ('to see if get github values from getGithub() method', () => {
-        const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'github')
+    it ('to see if get github values from getGithub() method', () => {
+        const newEngineer = new Employee('lucas', '0005', 'lucas@gmail.com', 'alucas')
     
-        expect(newEngineer.getgithub()).toEqual('alucas');
+        expect(newEngineer.getGithub()).toEqual('alucas');
     });
 });
 

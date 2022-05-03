@@ -1,5 +1,5 @@
-const Employee = require("../lib/Employee");
-const Intern = require('../lib/Intern.js');
+const Employee = require("../lib/Employee.js");
+const Intern = require('../lib/Intern');
 
 describe('Intern', () => {
     it ('to see if get constructor values for intern object', () => {

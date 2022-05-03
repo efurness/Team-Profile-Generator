@@ -1,11 +1,25 @@
-const Employee = require("../lib/Employee");
-teamMembers = []
 
+teamMembers = []
+const generateTeam = team => {
+    for (let i = 0; i < team.length; i++) {
+        if (team[i].getRole() === "Manager") {
+            generateManager(team[i])
+        }
+        if (team[i].getRole() === "Engineer") {
+            generateEngineer(team[i])
+
+        }
+        if (team[i].getRole() === "Intern") {
+            generateIntern(team[i])
+        }
+    }
+    return teamMembers.join("")
+}
 const generateManager = manager => {
     console.log(manager);
     let managerHTML = `
     
-            <h4>${generateTeam(team)}</h4>
+            <h4>${manager.name}</h4>
             <div class="row">
               <div class="card" style="width: 18rem;">
                 <div class="card-header" id=${manager.name}>
@@ -17,6 +31,7 @@ const generateManager = manager => {
                   <li class="list-group-item" id="humid2">OFFICE NUMBER:${manager.officeNumber}</li>
                 </ul>
               </div>`
+teamMembers.push(managerHTML);          
 }
 const generateEngineer = engineer => {
     console.log(engineer);
@@ -27,7 +42,7 @@ const generateEngineer = engineer => {
                 </div>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" id="temp2">ID:${engineer.id}</li>
-                <li class="list-group-item" id="wind2">EMAIL:${engineer.email}<a href="mailto:${manager.email}</a></li>
+                <li class="list-group-item" id="wind2">EMAIL:${engineer.email}<a href="mailto:${engineer.email}</a></li>
                 <li class="list-group-item" id="humid2">GITHUB USER NAME:< href="https://github.com/${engineer.githubUsername}">${engineer.github}</a></li>
                 </ul>
             </div>`
@@ -45,25 +60,17 @@ const generateIntern = intern => {
                 <li class="list-group-item" id="humid2">SCHOOL:${intern.school}</li>
                 </ul>
             </div>`
-            return html.join('');
+            // return html.join('');
     };     
-        for (let i = 0; i < teamMembers.length; i++) {
-            if (team[i].getRole() === "Manager") {
-                generateManager(team)[i]
-            }
-            if (team[i].getRole() === "Engineer") {
-                generateEngineer(team)[i]
-
-            }
-            if (team[i].getRole() === "Intern") {
-                generateIntern(team)[i]
-            }
-        }
+        
     
         
        
 
             module.exports = team => {
-                return
+
+                return`
+                
+                ${generateTeam(team)}`
 
             }
