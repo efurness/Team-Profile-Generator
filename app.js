@@ -22,44 +22,21 @@ const promptManager = () => {
             {type: 'input',
             name: 'id',
             message: 'What is your id number? (Required)',
-            // validate: id => {
-            //     if (id) {
-            //         return true;
-
-            //     } else {
-            //         console.log('please enter your id number');
-            //         return false;
-            //     }
-            // },
+            
         },
 
 
             {type: 'input',
             name: 'email',
             message: 'Enter your email? (Required)',
-            // validate: email => {
-            //     if (email) {
-            //         return true;
+            
 
-            //     } else {
-            //         console.log('please enter your email');
-            //         return false;
-            //     }
-            // },
         },
 
             {type: 'input',  
             name: 'officeNumber',
             message: 'What is your office number? (Required)',
-            // validate: officeNumber => {
-            //     if (officeNumber) {
-            //         return true;
-
-            //     } else {
-            //         console.log('please enter your office number?');
-            //         return false;
-            //     }
-            // }
+            
         },
     ])
     .then((answers) => {
@@ -107,61 +84,30 @@ const promptManager = () => {
                 type: 'input',
                 name: 'name',
                 message: 'What is your name? (Required)',
-                // validate: nameInput => {
-                //     if (nameInput) {
-                //         return true;
+                
+            },
 
-                //     } else {
-                //         console.log('please enter your name');
-                //         return false;
-                //     }
-
-                // },
-
-
-                type: 'input',
+               { type: 'input',
                 name: 'id',
                 message: 'What is your employee id number? (Required)',
-                // validate: id => {
-                //     if (id) {
-                //         return true;
+                
+            },
 
-                //     } else {
-                //         console.log('please enter your employee id number');
-                //         return false;
-                //     }
-                // },
-
-
-                type: 'input',
+                {type: 'input',
                 name: 'email',
                 message: 'Enter your email? (Required)',
-                // validate: email => {
-                //     if (email) {
-                //         return true;
-
-                //     } else {
-                //         console.log('please enter your email');
-                //         return false;
-                //     }
-                // },
-            
-                type: 'input',
+                
+            },
+                {type: 'input',
                 name: 'github',
                 message: 'What is your github username? (Required)',
-                // validate:  => {
-                //     if (github) {
-                //         return true;
-
-                //     } else {
-                //         console.log('please enter your github username?');
-                //         return false;
-                //     }
-                },
+                
+            },
             
-            ]).then(answers => {
+            ])
+            .then(answers => {
                 console.log(answers)
-                const engineer = new Engineer(answers.name, answers.employeeId, answers.employeeEmail, answers.github);
+                const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
                 teamMembers.push(engineer);
                 promptMenu();
             })
@@ -174,92 +120,38 @@ const promptManager = () => {
             {type: 'input',
             name: 'name',
             message: 'What is your name? (Required)',
-            // validate: nameInput => {
-            //     if (nameInput) {
-            //         return true;
+            
+        },
 
-            //     } else {
-            //         console.log('please enter your name');
-            //         return false;
-            //     }
-
-            // },
-
-    },
             {type: 'input',
             name: 'id',
             message: 'What is your id number? (Required)',
-            // validate: id => {
-            //     if (id) {
-            //         return true;
-
-            //     } else {
-            //         console.log('please enter your id number');
-            //         return false;
-            //     }
-            // },
-            },
+            
+        },
 
             {type: 'input',         
             name: 'email',
             message: 'Enter your email? (Required)',
-            // validate: email => {
-            //     if (email) {
-            //         return true;
-
-            //     } else {
-            //         console.log('please enter your email');
-            //         return false;
-            //     }
-            // },
+           
         },
+
            { type: 'input',
             name: 'school',
             message: 'What is your school? (Required)',
-        //     validate: school => {
-        //         if (school) {
-        //             return true;
-
-        //         } else {
-        //             console.log('please enter your school?');
-        //             return false;
-        //         }
-        //     }
-        // },
+        
         },
-    ]).then(answers => {
+    ])
+    .then(answers => {
         console.log(answers)
-        const intern = new Intern(answers.name, answers.employeeId, answers.employeeEmail, answers.school);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         teamMembers.push(intern);
         promptMenu();
     })
 };  
-// const prompt = () => {
-//     console.log(`FINISH BUILDING TEAM`);
 
-// // create directory if no output
-//         if (!fs.existsSync(OUTPUT_DIR)) {
-//             fs.mkdirSync(OUTPUT_DIR);
-// }
-//         // fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
-
-// }
 
 promptManager();
             
-        
-// function init () {
-//     inquirer.prompt(questions)
-//     .then((inquirerResponse) => {   
-//         console.log("Making Team Profile Generator");
-//         writeToFile("output/team.html", generateSite(inquirerResponse));
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-// }
 
-
-// init();
 
 
