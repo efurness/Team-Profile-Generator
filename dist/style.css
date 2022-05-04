@@ -4,7 +4,7 @@ col-12 col-md-8 col-xl-9 {
 
 }
 h1 {
-    color:rgb(25, 25, 216)
+    color:rgb(27, 27, 142)
 }
 
 .card {
@@ -16,7 +16,7 @@ h1 {
     text-align: center;
     border-style: solid;
     border-color: chartreuse;
-    border-width: 2px;
+    border-width: 4px;
 
 }
 

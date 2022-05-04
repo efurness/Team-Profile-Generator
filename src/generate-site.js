@@ -19,16 +19,16 @@ const generateManager = manager => {
     console.log(manager);
     let managerHTML = `
     
-            <h4>Team Manager:${manager.name}</h4>
+            <h4>TEAM MANAGER: ${manager.name}</h4>
             <div class="row">
               <div class="card" style="width: 18rem;">
                 <div class="card-header" id="${manager.name}">
-                  MANAGER:${manager.name}
+                  MANAGER: ${manager.name}
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">ID:${manager.id}</li>
-                  <li class="list-group-item">EMAIL:${manager.email}<a href="mailto:${manager.email}"></a></li>
-                  <li class="list-group-item">OFFICE NUMBER:${manager.officeNumber}</li>
+                  <li class="list-group-item">ID: ${manager.id}</li>
+                  <li class="list-group-item">EMAIL: ${manager.email}<a href="mailto:${manager.email}"></a></li>
+                  <li class="list-group-item">OFFICE NUMBER: ${manager.officeNumber}</li>
                 </ul>
               </div>`
     teamMembers.push(managerHTML);
@@ -43,9 +43,9 @@ const generateEngineer = engineer => {
           ENGINEER:${engineer.name}
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID:${engineer.id}</li>
-          <li class="list-group-item">EMAIL:${engineer.email}<a href="mailto:${engineer.email}"></a></li>
-          <li class="list-group-item">GITHUB-USER:<a href="https://github.com/${engineer.github}"></a></li>
+          <li class="list-group-item">ID: ${engineer.id}</li>
+          <li class="list-group-item">EMAIL: ${engineer.email}<a href="mailto:${engineer.email}"></a></li>
+          <li class="list-group-item">GITHUB-USER: <a href="https://github.com/${engineer.github}"></a></li>
         </ul>
       </div>`
         
@@ -57,12 +57,12 @@ const generateIntern = intern => {
     let internHTML =
         `<div class="card" style="width: 18rem;">
         <div class="card-header" id="${intern.name}">
-          MANAGER:${intern.name}
+          INTERN: ${intern.name}
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID:${intern.id}</li>
-          <li class="list-group-item">EMAIL:${intern.email}<a href="mailto:${intern.email}"></a></li>
-          <li class="list-group-item">SCHOOL:${intern.school}</li>
+          <li class="list-group-item">ID: ${intern.id}</li>
+          <li class="list-group-item">EMAIL: ${intern.email}<a href="mailto:${intern.email}"></a></li>
+          <li class="list-group-item">SCHOOL: ${intern.school}</li>
         </ul>
       </div>
       </div>`
@@ -98,6 +98,8 @@ const template = team => {
       <body>
         <header class = "container">
           <div class = "flex box justify-center my-team">
+          <br>
+          <br>
             <h1> My Team </h1>
           </div>
         </header>
