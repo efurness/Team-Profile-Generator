@@ -3,17 +3,27 @@ col-12 col-md-8 col-xl-9 {
     font-size: medium;
 
 }
-
+h1 {
+    color:rgb(25, 25, 216)
+}
 
 .card {
 
     flex: 1 0 200px;
-    background-color: blue;
-    color: white;
+    background-color: rgb(0, 166, 255);
+    color: rgb(17, 16, 16);
     padding: 10px;
     text-align: center;
     border-style: solid;
     border-color: chartreuse;
     border-width: 2px;
 
+}
+
+.card-header {
+    background-color: rgba(0,0,0,0);
+    color: black;
+    background: transparent;
+    
+    
 }
