@@ -47,7 +47,7 @@ My challenges for this project was to get the tests to function correctly, mainl
  
 [Also on Screencasify:](https://drive.google.com/file/d/166zm8ETrcYkzgebIc_Bf5CzmoAyvAl0U/view)
 
-[Screenshot] Team-Profile-Generator/team_profile_generator.png
+[Screenshot] Team-Profile-Generator/TeamProfile.png
 
 
 * For additional help or questions about collaboration, please reach out to Ellen.Furness@du.edu.
