@@ -24,4 +24,10 @@ describe('Employee', () => {
         expect(newEmployee.getId()).toEqual('0007');
     });
 
+    it('to see if get email values from getEmail() method', () => {
+        const newEmployee = new Employee('monty', '0007', 'monty@gmail.com')
+
+        expect(newEmployee.getEmail()).toEqual('monty@gmail.com');
+
+    });
 });
