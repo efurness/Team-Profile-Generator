@@ -2,6 +2,12 @@ col-12 col-md-8 col-xl-9 {
     align-items: flex-end;
     font-size: medium;
 }
+
+body {
+
+    color:midnightblue
+    
+}
 header {
     
     color: white;
