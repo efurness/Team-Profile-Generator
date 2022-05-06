@@ -1,3 +1,7 @@
+// an empty array for team members' data from app.js.  For loop, if manager is strictly equal to getRole from module than team.html will be generated, similarly for intern and engineer and repeats
+// for the length of te team starting at index 0 incrementing for all roles to be added, then generate each member, returns a join and uses a template literal with html code sections
+// Manager, Intern, Engineer are pushed into the ids in the html, including name, id and email and additional questions, and pushing each team member manager into its html section
+// the module exports team and returns generate Team to go directly into the html template which is created each time Node app.js is run with all the data input
 
 teamMembers = []
 const generateTeam = team => {

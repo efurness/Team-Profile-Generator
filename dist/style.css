@@ -1,3 +1,4 @@
+/* styles for team profile webpage */
 col-12 col-md-8 col-xl-9 {
     align-items: flex-end;
     font-size: medium;
@@ -23,6 +24,7 @@ header {
 
 
 h1 {
+
     color:rgb(44, 44, 235)
 }
 

@@ -1,3 +1,11 @@
+// for the app.js the libraries of manager, engineer and intern were required as well as inquirer, the source file generate-site, path, fs, and OUTPUT directory and 
+// PATH was used to join and resolve the input questions with the output.  teamMembers was an empty array.  Inquirer prompts were used for each manager, engineer and intern
+// The type, name and message prompts were layed out in a structure with manager first prompted and adding engineers and interns to the team using a build team function
+// Additional questions were for interns' school, engineers' github username and Managers' office number.  The .then fed the answers for each cohert and pushed into the generate-site file
+// A prompt menu came up each time in Node once the manager role was entered to add engineers and interns to the team using a switch function with a case for each that was prompted to add to the team
+// After input, the prompt menu asks to finish building team or add more team members.
+// An output directory is created if an output path doesn't exist using fs write file sync to add a new file with output from prompts for team members to generate site
+
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
